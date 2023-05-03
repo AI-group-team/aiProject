@@ -33,3 +33,20 @@ def player_move(index):
         else:
             status.config(text="O's turn")
             computer_move()
+
+# Create the computer move function
+def computer_move():
+    global board
+    index = random.randint(0, 8)
+    while board[index] != " ":
+        index = random.randint(0, 8)
+    board[index] = "O"
+    buttons[index].config(text="O")
+    if check_win("O"):
+        status.config(text="O wins!")
+        disable_buttons()
+    elif check_tie():
+        status.config(text="Tie game!")
+        disable_buttons()
+    else:
+        status.config(text="X's turn")
