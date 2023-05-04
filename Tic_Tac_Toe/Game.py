@@ -50,3 +50,23 @@ def computer_move():
         disable_buttons()
     else:
         status.config(text="X's turn")
+# Create the win checking function
+def check_win(player):
+    if board[0] == player and board[1] == player and board[2] == player:
+        return True
+    elif board[3] == player and board[4] == player and board[5] == player:
+        return True
+    elif board[6] == player and board[7] == player and board[8] == player:
+        return True
+    elif board[0] == player and board[3] == player and board[6] == player:
+        return True
+    elif board[1] == player and board[4] == player and board[7] == player:
+        return True
+    elif board[2] == player and board[5] == player and board[8] == player:
+        return True
+    elif board[0] == player and board[4] == player and board[8] == player:
+        return True
+    elif board[2] == player and board[4] == player and board[6] == player:
+        return True
+    else:
+        return False
