@@ -70,3 +70,9 @@ def check_win(player):
         return True
     else:
         return False
+# Create the tie checking function
+def check_tie():
+    if " " not in board:
+        return True
+    else:
+        return False
