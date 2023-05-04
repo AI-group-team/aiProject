@@ -31,10 +31,10 @@ class GameGUI:
         self.root.title("Rock, Paper, Scissors")
         self.root.geometry("300x200")
 
-        self.label = tk.Label(self.root, text="welcome to the game:")
+        self.label = tk.Label(self.root, text="ወደ ጨዋታው እንኳን በደህና መጡ!! Welcome to the game!!")
         self.label.pack(pady=10)
         
-        self.label = tk.Label(self.root, text="Choose your move:")
+        self.label = tk.Label(self.root, text="እርምጃዎን ይምረጡ (Choese your step:)")
         self.label.pack(pady=10)
         
         self.rock_button = tk.Button(self.root, text="Rock", command=lambda: self.play_game('rock'))
@@ -58,9 +58,9 @@ class GameGUI:
         
         # Display result
         if winner == 'tie':
-            self.result_label.config(text="It's a tie!")
+            self.result_label.config(text="ከኮምፒዩተሩ ጋር እኩል ወጥተዋል ‼️ It's a tie!")
         else:
-            self.result_label.config(text=f"{winner.capitalize()} wins!")
+            self.result_label.config(text=f"{winner.capitalize()} wins! እንኳን ደስ አሎት አሸንፈዋል")
         
         # Remove buttons and show play again button
         self.rock_button.pack_forget()
