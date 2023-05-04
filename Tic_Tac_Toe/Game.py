@@ -81,3 +81,5 @@ def disable_buttons():
     for button in buttons:
         button.config(state="disabled")\
         
+# Run the main loop
+root.mainloop()
