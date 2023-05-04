@@ -6,7 +6,7 @@ import random
 OPTIONS = ["rock", "paper", "scissors"]
 
 
-score = {"player": 0, "computer": 0}
+score = {"ተጫዋች": 0, "ኮምፒውተር": 0}
 
 # function to generate random option
 def get_computer_choice():
@@ -19,18 +19,18 @@ def player_choice(player_option):
 
     # Determine the winner
     if player_option == computer_option:
-        result = "Tie"
+        result = "እኩል"
     elif (player_option == "rock" and computer_option == "scissors" or
           player_option == "paper" and computer_option == "rock" or
           player_option == "scissors" and computer_option == "paper"):
-        result = "You win!"
-        score["player"] += 1
+        result = "አሸናፊ!"
+        score["ተጫዋች"] += 1
     else:
-        result = "Computer wins!"
-        score["computer"] += 1
+        result = "የኮምፒውተር አሸናፊ!"
+        score["ኮምፒውተር"] += 1
     
     # Update the score 
-    score_label.config(text="Player: {}  Computer: {}".format(score["player"], score["computer"]))
+    score_label.config(text="ተጫዋች: {}  ኮምፒውተር: {}".format(score["ተጫዋች"], score["ኮምፒውተር"]))
     
     # Update the result 
     result_label.config(text=result, font=("Arial", 16, "bold"), justify="center")
@@ -76,7 +76,7 @@ result_label = tk.Label(root, text="")
 result_label.pack(pady=10)
 
 # Create the label to display the player's choice
-pp_label = tk.Label(root, text="player")
+pp_label = tk.Label(root, text="ተጫዋች")
 pp_label.config(font=("Arial", 12,"bold"))
 player_choice_label = tk.Label(root, image=None)
 player_choice_label.pack(side=tk.LEFT, padx=10)
@@ -85,7 +85,7 @@ pp_label.place(x=250, y=20, anchor="ne")
 
 
 # Create the label to display the computer's choice
-cp_label = tk.Label(root, text="computer")
+cp_label = tk.Label(root, text="ኮምፒውተር")
 cp_label.config(font=("Arial", 12,"bold"))
 computer_choice_label = tk.Label(root, image=None)
 computer_choice_label.pack(side=tk.LEFT, padx=10)
@@ -94,7 +94,7 @@ computer_choice_label.place(x=200, y=50)
 cp_label.place(x=120, y=20, anchor="ne")
 
 # Create the label to display the score
-score_label = tk.Label(root, text="Player: 0  Computer: 0")
+score_label = tk.Label(root, text="ተጫዋች: 0  ኮምፒውተር: 0")
 score_label.pack()
 
 # Start the main loop
