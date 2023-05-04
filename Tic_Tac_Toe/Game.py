@@ -76,3 +76,7 @@ def check_tie():
         return True
     else:
         return False
+# Create the function to disable all buttons
+def disable_buttons():
+    for button in buttons:
+        button.config(state="disabled")
