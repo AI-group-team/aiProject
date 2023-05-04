@@ -1,0 +1,12 @@
+Here's how the program works:
+The user is prompted to enter a string, which is stored in the string variable.
+An empty dictionary called freq is created to store the frequency count of each character in the string.
+A for loop iterates over each character in the string. For each character,
+ it checks if it's already in the freq dictionary. If it is, it increments the count by 1. If it's not, 
+it adds it to the dictionary with a count of 1.
+Another for loop iterates over each key-value pair in the freq dictionary. 
+It prints out the count and the character, separated by an apostrophe s.
+
+        Name : Hiro Worku
+        ID No: 1400/12
+        
